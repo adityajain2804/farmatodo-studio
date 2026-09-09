@@ -118,6 +118,29 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Studio palette */
+  --brand: oklch(0.685 0.156 237);
+  --brand-foreground: oklch(0.985 0.005 240);
+  --brand-soft: oklch(0.96 0.025 237);
+  --success: oklch(0.696 0.17 162.48);
+  --success-soft: oklch(0.96 0.04 162.48);
+  --warning: oklch(0.769 0.188 70.08);
+  --warning-soft: oklch(0.965 0.045 85);
+  --danger: oklch(0.645 0.246 16.439);
+  --danger-soft: oklch(0.962 0.02 16.439);
+  --causal: oklch(0.627 0.265 303.9);
+  --causal-soft: oklch(0.965 0.02 303.9);
+  --surface-1: oklch(0.984 0.003 247.858);
+  --surface-2: oklch(0.968 0.007 247.896);
+  --shell: oklch(0.208 0.042 265.755);
+  --shell-2: oklch(0.279 0.041 260.031);
+  --shell-foreground: oklch(0.984 0.003 247.858);
+  --ink: oklch(0.208 0.042 265.755);
+  --ink-2: oklch(0.446 0.043 257.281);
+  --ink-3: oklch(0.704 0.04 256.788);
+  --hairline: oklch(0.929 0.013 255.508);
+
 }
 
 .dark {
