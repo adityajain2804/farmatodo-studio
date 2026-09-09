@@ -233,11 +233,12 @@ const LIFECYCLE_PLAN: Lifecycle[] = [
 const EXCLUDED_INDEXES = new Set([4, 12, 19, 27]);
 
 export const CUSTOMER_ALLOCATIONS: CustomerAllocation[] = Array.from({ length: 35 }, (_, i) => {
-  const p = MOCK_PRODUCTS[i % MOCK_PRODUCTS.length];
+  const p = MOCK_PRODUCTS[i % MOCK_PRODUCTS.length]!;
   const excluded = EXCLUDED_INDEXES.has(i) || (!p.needs_discount_flag && i % 5 === 4);
   const prime: PrimeStatus = i % 2 === 0 ? "prime" : "non_prime";
   const drift = 1 + ((i % 7) - 3) * 0.06;
-  const lifecycle = LIFECYCLE_PLAN[i];
+  const lifecycle: Lifecycle = LIFECYCLE_PLAN[i] ?? "active_repeat";
+
   const primeDisc = Math.min(0.48, p.prime_disc + (prime === "prime" ? 0.05 : 0));
   const nimRegular = Math.round(p.net_incremental_margin_cop * drift);
   const nimPrime = Math.round(nimRegular * 1.18);
